@@ -38,7 +38,7 @@ $(() => {
         score++;
         $('#match').show().delay(500).hide();
         console.log("score: " + score);
-        $('#score').html(score);
+        $('#scoreValue').html(score);
         count=10;
         $('#submit').off('click');
         $('body').unbind('keypress');
@@ -53,7 +53,7 @@ $(() => {
       else {
         score--;
         console.log("score: " + score);
-        $('#score').html(score);
+        $('#scoreValue').html(score);
         count=10;
         $('#submit').off('click');
         $('body').unbind('keypress');
@@ -70,7 +70,7 @@ $(() => {
           score++;
           $('#match').show().delay(500).hide();
           console.log("score: " + score);
-          $('#score').html(score);
+          $('#scoreValue').html(score);
           count=10;
           $('body').unbind('keypress');
           $('#submit').off('click');
@@ -85,7 +85,7 @@ $(() => {
         else {
           score--;
           console.log("score: " + score);
-          $('#score').html(score);
+          $('#scoreValue').html(score);
           count=10;
           $('body').unbind('keypress');
           $('#submit').off('click');
@@ -98,7 +98,7 @@ $(() => {
 
   //This Event Listener starts the Game and changes Layout
   $("#go").on('click', () => {
-    $('#score').html(0);
+    $('#scoreValue').html(0);
     $('#submits').show();
     $('body').find('#valueField').focus();
     $('#go').hide();
