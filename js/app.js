@@ -6,6 +6,7 @@ $(() => {
   let a = 0;
   let b = 0;
   let result = 0;
+  const audio = document.querySelector('audio');
 
   //This function gets a Random Number between 1 and 101
   var randomNumber = function () {
@@ -30,7 +31,7 @@ $(() => {
     $('#display').text(a + " + " + b + " = " + " ?")
 
     //This checks the value on Submit when Clicked
-    $('#submit').on('click', () => {
+    $('#controllo').on('click', () => {
       $('#valueField').focus();
       console.log(result, parseInt($('#valueField').val()) );
       //if Field is correct, add 1 to Score and run Game again
@@ -46,8 +47,10 @@ $(() => {
       }
       //if Field is empty, make an alert and nullify submit
       else if ($('#valueField').val() == "") {
-        alert("Enter a Number");
-        return false;
+        audio.src = "./audio/prova-di-nuovo.mp3";
+        console.log(audio.src);
+        audio.play();
+        // return false;
       }
       //if Value is wrong, subtract 1 to Score and run Game again
       else {
@@ -78,8 +81,10 @@ $(() => {
         }
         //if Field is empty, make an alert and nullify submit
         else if ($('#valueField').val() == "") {
-          alert("Enter a Number");
-          return false;
+          audio.src = "./audio/prova-di-nuovo.mp3";
+          console.log(audio.src);
+          audio.play();
+          // return false;
         }
         //if Value is wrong, subtract 1 to Score and run Game again
         else {

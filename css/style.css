@@ -46,21 +46,13 @@ div {
   left: 1050px;
 }
 
-.blueBorder {
-  border: 2px solid blue;
-}
-.colorBlue {
-  color: blue;
-}
-
-.hidden {
-  display: none;
-}
-
 #controllo {
   position: absolute;
-  top: 530px;
-  left: 950px;
+  top: 510px;
+  left: 920px;
+  width: 220px;
+  height: 100px;
+  background: transparent;
 }
 
 #display {
@@ -73,4 +65,8 @@ div {
   position: absolute;
   top: 60px;
   left: 70px;
+}
+
+.hidden {
+  display: none;
 }
