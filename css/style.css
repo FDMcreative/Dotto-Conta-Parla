@@ -1,0 +1,76 @@
+* {
+  color: cyan;
+  font-size: 40px;
+}
+
+body {
+  position: relative;
+}
+
+title {
+  display: none;
+}
+
+div {
+  display: inline-flex;
+}
+
+#mask {
+
+}
+
+#timer {
+  position: absolute;
+  top: 85px;
+  left: 1000px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+#circle start {
+  background-color: white;
+  color:blue;
+}
+
+#go {
+  position: absolute;
+  top: 430px;
+  left: 1050px;
+}
+
+.blueBorder {
+  border: 2px solid blue;
+}
+.colorBlue {
+  color: blue;
+}
+
+.hidden {
+  display: none;
+}
+
+#controllo {
+  position: absolute;
+  top: 530px;
+  left: 950px;
+}
+
+#display {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+
+#score {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+}

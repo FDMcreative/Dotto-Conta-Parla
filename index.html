@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Game with Timer</title>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <img id="mask" src="./images/dotto conta-parla mask.png">
+
+    <div id="timer">
+      ?
+    </div>
+
+    <div id="display">
+      Ready?
+    </div>
+
+    <button id="go">Go</button>
+    <div id="submits">
+      <input id="valueField" class="blueBorder" type="text" placeholder="scrivi qui il numero" autofocus>
+
+    </div>
+
+    <div id="score">
+      <p> Score: <span id="scoreValue">0</span> </p>
+    </div>
+
+    <div id="match" style="font-weight:bold; display:none">
+      It's a match!
+    </div>
+
+    <input id="controllo" type="submit" value="Controllo">
+
+  </body>
+</html>
