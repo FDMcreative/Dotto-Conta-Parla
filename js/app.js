@@ -16,6 +16,11 @@ $(() => {
   let result = 0;
   const audio = document.querySelector('audio');
 
+  $("#tastierino").children().on('click', (e) => {
+    // $('#valueField').val($('#zero').text());
+    console.log($(e.target).text());
+  });
+
   //This Event Listener starts the Game and changes Layout
   $("#go").on('click', () => {
     $('#puntiValue').html(0);
@@ -34,7 +39,7 @@ $(() => {
     //     clearInterval(timeInterval);
     //   }
     // }, 1000);
-    
+
     mainGame();
   });
 
@@ -58,7 +63,7 @@ $(() => {
     console.log(a, b, result);
 
     //This print on screen the Operation to solve
-    $('#operazione').text(a + " + " + b + " = " + " ?")
+    $('#operazione').text(a + " + " + b + " = ")
 
     //This checks the value on Submit when Clicked
     $('#controllo').on('click', () => {

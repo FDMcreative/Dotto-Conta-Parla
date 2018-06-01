@@ -62,6 +62,7 @@ button {
 #valueField {
   background-color: transparent;
   text-align: center;
+  width: 15%;
 }
 
 #timer {
@@ -83,7 +84,7 @@ button {
   display: none;
 }
 
-/* SEZIONI DIVS */
+/* SEZIONI-DIVS */
 
 #redButtons {
   display: inline-flex;
@@ -106,7 +107,7 @@ button {
   border: 1px solid black;
   width: 12%;
 }
-#tastierinoButtons {
+#tastierino {
   display: inline-block;
   position: absolute;
   left: 49%;
@@ -135,38 +136,120 @@ button {
   }
 
   /*GREEN DIV*/
-  #calcolo {
+  #greenButtons button {
     display: inline-block;
     position: absolute;
-    top: 23%;
+    transform: skewY(-19deg);
     width: 100%;
-    height: 90px;
+  }
+
+  #calcolo {
+    top: 25%;
+    height: 13%;
+  }
+  #dettato {
+    top: 40%;
+    height: 12%;
+  }
+  #tabelle {
+    top: 54%;
+    height: 12%;
+  }
+  #maggioreMinore {
+    top: 68%;
+    height: 13%;
   }
 
   /*OPERAZIONI DIV*/
-  #x {
+  #diviso {
     display: inline-block;
     position: absolute;
-    top: 28%;
+    top: 16%;
     width: 100%;
-    height: 90px;
+    height: 12%;
+    transform: skewY(-19deg);
+  }
+  #per {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 13%;
+    transform: skewY(-19deg);
+  }
+  #meno {
+    display: inline-block;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    height: 13%;
+    transform: skewY(-19deg);
+  }
+  #più {
+    display: inline-block;
+    position: absolute;
+    top: 59%;
+    width: 100%;
+    height: 12%;
+    transform: skewY(-19deg);
+  }
+  #asterisco {
+    display: inline-block;
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    height: 13%;
+    transform: skewY(-19deg);
   }
 
   /*TASTIERINO DIV*/
-  #sette {
+  .tasti {
     display: inline-block;
-    position: absolute;
+    position: relative;
     top: 29%;
-    width: 33%;
-    height: 90px;
+    width: 30%;
+    height: 13%;
+    margin: 2% 1%;
   }
+  #sette {
+
+  }
+  #otto {
+
+  }
+  #nove {
+
+  }
+  #quattro {
+
+  }
+  #cinque {
+
+  }
+  #sei {
+
+  }
+  #uno {
+
+  }
+  #due {
+
+  }
+  #tre {
+
+  }
+  #zero {
+
+  }
+
+  /*MAIN DIV*/
 
   #go {
     display: inline-block;
     position: absolute;
     top: 59%;
     width: 100%;
-    height: 90px;
+    height: 13%;
   }
 
   #controllo {
@@ -174,5 +257,5 @@ button {
     position: absolute;
     top: 74%;
     width: 100%;
-    height: 90px;
+    height: 13%;
   }
