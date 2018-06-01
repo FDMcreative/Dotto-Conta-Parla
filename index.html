@@ -11,35 +11,49 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" charset="utf-8"></script>
   </head>
+
   <body>
 
-    <img id="mask" src="./images/dotto conta-parla mask.png">
+    <div id="main">
 
-    <div id="timer">
-      ?
+      <img id="mask" src="./images/dotto conta-parla mask.png">
+
+      <div id="display">
+        <span id="operazione">Ready?</span>
+        <input id="valueField" type="text" placeholder="scrivi qui il numero" autofocus>
+        <div id="punti">
+          <p> punti: <span id="puntiValue">0</span> </p>
+        </div>
+      </div>
+
+      <div class="colonne" id="redButtons">
+        <button id="cancella">cancella</button>
+      </div>
+
+      <div class="colonne" id="greenButtons">
+        <button id="calcolo">calcolo</button>
+
+      </div>
+
+      <div class="colonne" id="operazioniButtons">
+        <button id="x">x</button>
+      </div>
+
+      <div class="colonne" id="tastierinoButtons">
+        <button id="sette">7</button>
+      </div>
+
+      <div class="colonne" id="mainButtons">
+        <button id="go">go</button>
+        <button id="controllo">controllo</button>
+
+        <!-- <div id="timer">?</div>
+        <input id="controllo" type="submit" value=""> -->
+      </div>
+
     </div>
 
-    <div id="display">
-      Ready?
-    </div>
-
-    <button id="go">Go</button>
-    <div id="submits">
-      <input id="valueField" class="blueBorder" type="text" placeholder="scrivi qui il numero" autofocus>
-
-    </div>
-
-    <div id="score">
-      <p> Score: <span id="scoreValue">0</span> </p>
-    </div>
-
-    <div id="match" style="font-weight:bold; display:none">
-      It's a match!
-    </div>
-
-    <input id="controllo" type="submit" value="">
-
-    <audio></audio>
+    <audio>audio</audio>
 
   </body>
 </html>
