@@ -1,13 +1,5 @@
 $(() => {
 
-  //Resize DIvs on REsizing windows
-  var divsHeight = $('#mask').height();
-    $('.colonne').css('height', divsHeight);
-  window.addEventListener('resize', () => {
-    var divsHeight = $('#mask').height();
-      $('.colonne').css('height', divsHeight);
-  })
-
   var timeInterval;
   let count = 10;
   let punti = 0;
@@ -16,12 +8,23 @@ $(() => {
   let result = 0;
   const audio = document.querySelector('audio');
 
+  //This Event Listener checks which number you press and prints it on screen.
   $("#tastierino").children().on('click', (e) => {
     // $('#valueField').val($('#zero').text());
-    console.log($(e.target).text());
+    var x = $(e.target).text();
+    if ( $('#valueField').val() == "" ) {
+      var y = "";
+    }
+    else {
+      var y = $('#valueField').val();
+    }
+    $('#valueField').val(y + x);
+    console.log(y + x);
+    // $('#valueField').val($('#valueField').val() + x);
+    // console.log($('#valueField').val(x) + $(e.target).text());
   });
 
-  //This Event Listener starts the Game and changes Layout
+  //This Event Listener starts the Game
   $("#go").on('click', () => {
     $('#puntiValue').html(0);
     $('body').find('#valueField').focus();
@@ -39,17 +42,16 @@ $(() => {
     //     clearInterval(timeInterval);
     //   }
     // }, 1000);
-
     mainGame();
   });
 
   //This function gets a Random Number between 1 and 101
-  var randomNumber = function () {
+  function randomNumber() {
     return (Math.round(Math.random()*100)+1);
   };
 
   //This is the Game
-  var mainGame = function () {
+  function mainGame() {
     $('#valueField').val('');
     a = 0;
     b = 0;
@@ -79,7 +81,7 @@ $(() => {
         console.log("punti: " + punti);
         $('#puntiValue').html(punti);
         count=10;
-        $('#submit').off('click');
+        $('#controllo').off('click');
         $('body').unbind('keypress');
         mainGame();
       }
@@ -96,7 +98,7 @@ $(() => {
         console.log("punti: " + punti);
         $('#puntiValue').html(punti);
         count=10;
-        $('#submit').off('click');
+        $('#controllo').off('click');
         $('body').unbind('keypress');
         mainGame();
       };
@@ -117,7 +119,7 @@ $(() => {
           $('#puntiValue').html(punti);
           count=10;
           $('body').unbind('keypress');
-          $('#submit').off('click');
+          $('#controllo').off('click');
           mainGame();
         }
         //if Field is empty, make an alert and nullify submit
@@ -134,12 +136,21 @@ $(() => {
           $('#puntiValue').html(punti);
           count=10;
           $('body').unbind('keypress');
-          $('#submit').off('click');
+          $('#controllo').off('click');
           mainGame();
         };
       }
     });
 
   };
+
+  //RESPONSIVE DIVS
+  //Resize Divs on Resizing of Mask
+  var divsHeight = $('#mask').height();
+    $('.colonne').css('height', divsHeight);
+  window.addEventListener('resize', () => {
+    var divsHeight = $('#mask').height();
+      $('.colonne').css('height', divsHeight);
+  })
 
 });
